@@ -5,21 +5,31 @@ To implement Stop and Wait protocol using NS2 program.
 
 # EQUIPMENTS REQUIRED
 1.	PC with ubuntu operating system
+
 2.	NS2 Software
 
 # ALGORITHM
 Step 1: Start the program.
+
 Step 2: Declare the global variables ns for creating a new simulator. Step 3: Open the network animator file in the write mode.
-Step 4: Open the trace file in the write mode. Step 5: Transfer the packets in network.
-Step 6: Create the capable no of nodes.
-Step 7: Create the duplex-link between the nodes including the delay time, bandwidth and dropping queue mechanism.
-Step 8: Set a tcp connection for source node. Step 9: Set the destination node using tcp sink.
-Step 10: Set the window size and the packet size for the tcp. Step 11: Set up the ftp over the tcp connection.
-Step 12: Define the plot window and finish procedure.
-Step 13: In the definition of the finish procedure declare the global variables. Step 14: Close the trace file and namfile and execute the network animation file. Step 15: At the particular time call the finish procedure.
-Step 16: Stop the program.
+
+Step 3: Open the trace file in the write mode. Step 5: Transfer the packets in network.
+Step 4: Create the capable no of nodes.
+
+Step 5: Create the duplex-link between the nodes including the delay time, bandwidth and dropping queue mechanism.
+
+Step 6: Set a tcp connection for source node. Step 9: Set the destination node using tcp sink.
+
+Step 7: Set the window size and the packet size for the tcp. Step 11: Set up the ftp over the tcp connection.
+
+Step 8: Define the plot window and finish procedure.
+
+Step 9: In the definition of the finish procedure declare the global variables. Step 14: Close the trace file and namfile and execute the network animation file. Step 15: At the particular time call the finish procedure.
+
+Step 10: Stop the program.
  
 # PROGRAM
+~~~
 set ns [new Simulator]
 set namfile [open out.nam w]
 $ns namtrace-all $namfile proc finish {}
@@ -67,8 +77,12 @@ $ns at 3.1 "$ns trace-annotate \"FTP stops\""
 $ns at 0.0 "$n0 label Sender"
 $ns at 0.0 "$n1 label Receiver"
 $ns run
+~~~
  
 # OUTPUT
+
+
+<img width="557" height="287" alt="566218551-68b4bce6-8cd5-4680-b2d9-218acea9aea7" src="https://github.com/user-attachments/assets/6d287a6f-398f-4ead-adf6-c26d56a3d94f" />
 
 
 
